@@ -1,0 +1,91 @@
+@import "nav.css";
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	
+}
+
+
+.main-body {
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	top:96px;
+	left: 0;
+	right: 0;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	padding: 0;
+	margin: 0;
+}
+
+.subtitle {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.CTA {
+	padding: 15px;
+	background: orange;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 15px;
+	color: black;
+	transition: background 300ms ease-in-out;
+	border: 2px solid white;
+	font-weight: bold;
+
+}
+
+.CTA:hover {
+	background: red;
+}
+
+.s-media {
+	position: fixed;
+	display: inline-block;
+	height: 300px;
+	top: calc(50% - 150px);
+	right: 0;
+	font-size: 50px;
+	color: gray;
+	padding: 10px;
+	right: -40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: right 300ms ease-in-out;
+}
+
+.s-media:hover {
+	right: 0;
+}
+
+.s-media i {
+	display: block;
+}
+
+.s-media a {
+	color: gray;
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+}
+
+.s-media a:hover {
+	color: white;
+}
