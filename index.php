@@ -10,17 +10,24 @@
 	</head>
 	<body>
 		<div class="container">
+			
 			<nav class="main-nav">
 				<ul>
 					<li class="logo">AK</li>
-					<li><a href="#">Home</a></li>
+					<li><a href="#" class="active">Home</a></li>
 					<li><a href="#">My Work</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="main-body">
+			<div class="fullscreen-bg">
+			    <video loop muted autoplay poster="img/Hello-World.jpg" class="fullscreen-bg__video">
+			        <source src="img/Hello-World.webm" type="video/webm">
+			        <source src="img/Hello-World.mp4" type="video/mp4">
+			    </video>
+			</div>
 				<h1 class="title">Welcome! My name is Alen</h1>
-				<span class="subtitle">And I am a PHP & HTML Developer.</span>
+				<span class="subtitle">And I am a HTML &amp; PHP Developer.</span>
 				<a href="/work.php" class="CTA">Check My Work</a>
 			</div>
 
@@ -31,5 +38,6 @@
 				<a href="http://facebook.com/alenkalac" target="_blank"><i class="ion-social-facebook"></i></a>
 			</div>
 		</div>
+		
 	</body>
 </html>

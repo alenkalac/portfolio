@@ -10,7 +10,7 @@ nav {
 	padding-bottom: 10px;
 	position: relative;
 	top: -100px;
-	animation: slideNav 500ms;
+	animation: slideNav 600ms;
 	border-top: 5px solid #ffb100;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(1, .2, 1, 1.2);
@@ -31,7 +31,7 @@ nav ul {
 	margin: 0;
 	height: 70px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -40,7 +40,7 @@ nav ul {
 nav ul li {
 	padding: 15px;
 	display: inline-block;
-	font-size: 28px;
+	
 }
 
 nav ul .link {
@@ -48,26 +48,44 @@ nav ul .link {
 }
 
 nav ul li a{
+	font-size: 28px;
 	display: block;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: white;
+	transition: all 300ms;
 }
 
-nav ul li a:hover {
-	text-decoration: underline;
+nav ul li a:hover:not(.active) {
+	color: gray;
+	transform: scale(1.1);
+
+}
+
+nav .active {
+	color: white;
+	transform: scale(1.1);
+}
+
+nav .active:before {
+	content: "> ";
+	color: red;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 nav ul .logo {
 	--box-size-px: 70px;
 	display: inline-block;
+	
 	width: var(--box-size-px);
 	height: var(--box-size-px);
-	background-color: #ff608e;
+	background-color: orange;
 	border-radius: 10px;
 	font-size: 35px;
 	padding: 0;
+	
 	line-height: var(--box-size-px);
 	text-align: center;
 	font-weight: bold;
@@ -75,9 +93,31 @@ nav ul .logo {
 	color: black;
 	border: 5px solid white;
 
+	/*
 	animation: heartbeat 800ms infinite;
 	animation-timing-function: ease-in-out;
 	animation-delay: 600ms;
+	*/
+}
+
+/* EDGE SUPPORT */
+_:-ms-lang(x), _:-webkit-full-screen, nav ul .logo {
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+}
+
+/* IE 8, 9, 10 */
+@media screen\0 {
+    nav ul {
+    	justify-content: flex-start;
+    }
+
+    nav ul .logo {
+		width: 70px;
+		height: 70px;
+		line-height: 70px;
+	}
 }
 
 
