@@ -75,7 +75,7 @@ nav .active:after {
 }
 nav .active:before, nav .active:after {
 	
-	color: red;
+	color: white;
 	font-size: 28px;
 	font-weight: bold;
 }
