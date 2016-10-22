@@ -58,7 +58,7 @@ nav ul li:not(.logo) a{
 }
 
 nav ul li:not(.logo) a:hover:not(.active) {
-	color: gray;
+	color: red;
 	transform: scale(1.1);
 
 }
@@ -92,6 +92,10 @@ nav ul .logo a:hover {
 	transform: scale(1.1);
 }
 
+nav ul .logo:hover {
+	background: red;
+}
+
 nav ul .logo {
 	--box-size-px: 70px;
 	display: inline-block;
@@ -111,12 +115,14 @@ nav ul .logo {
 	border: 5px solid white;
 
 	cursor: pointer;
+	transition: background 200ms ease-in-out;
 
 	/*
 	animation: heartbeat 800ms infinite;
 	animation-timing-function: ease-in-out;
 	animation-delay: 600ms;
 	*/
+	
 }
 
 /* EDGE SUPPORT */
